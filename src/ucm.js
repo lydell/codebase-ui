@@ -1,7 +1,6 @@
 import "./init";
 import detectOs from "./detectOs";
 import preventDefaultGlobalKeyboardEvents from "./preventDefaultGlobalKeyboardEvents";
-import { Elm } from "./Ucm.elm";
 
 const basePath = new URL(document.baseURI).pathname;
 
@@ -26,4 +25,4 @@ const flags = {
 preventDefaultGlobalKeyboardEvents();
 
 // The main entry point for the `ucm` target of the Codebase UI.
-Elm.Ucm.init({ flags });
+window.Elm.Ucm.init({ flags });

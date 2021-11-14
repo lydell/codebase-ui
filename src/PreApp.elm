@@ -5,6 +5,7 @@ import App
 import Browser
 import Browser.Navigation as Nav
 import Env exposing (Flags)
+import Hash
 import Html
 import Http
 import Perspective exposing (CodebasePerspectiveParam(..), Perspective, PerspectiveParams(..))
@@ -76,7 +77,8 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         FetchPerspectiveFinished preEnv result ->
-            case result of
+            -- case result of
+            case Hash.fromString "#test" |> Maybe.map Perspective.Codebase |> Result.fromMaybe (Http.BadBody "Hash.fromString failed") of
                 Ok perspective ->
                     let
                         env =

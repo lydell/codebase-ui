@@ -1,7 +1,6 @@
 import "./init";
 import detectOs from "./detectOs";
 import preventDefaultGlobalKeyboardEvents from "./preventDefaultGlobalKeyboardEvents";
-import { Elm } from "./UnisonShare.elm";
 
 const basePath = new URL(document.baseURI).pathname;
 const apiBasePath = ["api"];
@@ -16,4 +15,4 @@ const flags = {
 preventDefaultGlobalKeyboardEvents();
 
 // The main entry point for the `UnisonShare` target of the Codebase UI.
-Elm.UnisonShare.init({ flags });
+window.Elm.UnisonShare.init({ flags });

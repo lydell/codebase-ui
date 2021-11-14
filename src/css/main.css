@@ -1,3 +1,11 @@
+@import "./themes/unison/light.css";
+@import "./base.css";
+@import "./syntax.css";
+@import "./animations.css";
+@import "./elements.css";
+@import "./composites.css";
+@import "./app.css";
+
 :root {
   --size-base: 16px;
   --app-header-height: 3.5rem;
@@ -23,11 +31,3 @@
   --font-size-medium: 0.875rem;
   --font-size-small: 0.75rem;
 }
-
-@import "./themes/unison/light.css";
-@import "./base.css";
-@import "./syntax.css";
-@import "./animations.css";
-@import "./elements.css";
-@import "./composites.css";
-@import "./app.css";

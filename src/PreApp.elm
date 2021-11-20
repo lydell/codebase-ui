@@ -77,8 +77,7 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         FetchPerspectiveFinished preEnv result ->
-            -- case result of
-            case Hash.fromString "#test" |> Maybe.map Perspective.Codebase |> Result.fromMaybe (Http.BadBody "Hash.fromString failed") of
+            case result of
                 Ok perspective ->
                     let
                         env =

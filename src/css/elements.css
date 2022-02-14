@@ -172,7 +172,7 @@ hr {
   display: inline-flex;
   height: 1.5rem;
   font-size: 0.625rem;
-  line-heigth: 1;
+  line-height: 1;
   margin: 0 0.35rem;
   color: var(--color-keyboard-shortcut-then);
   align-items: center;
